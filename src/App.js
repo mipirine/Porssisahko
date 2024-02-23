@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Chart } from "react-google-charts";
 import axios from 'axios';
 
-/* function App() {
+function App() {
   const [data, setData] = useState('');
 
   useEffect(() => {
@@ -11,18 +11,18 @@ import axios from 'axios';
       setData(text);
     })();
   });
-
+  console.log("data: ", data);
   return <div>{data}</div>;
-} */
-const options = {
+} 
+/* const options = {
   title: "Pörssisähkön hinta, 7vk [c/kWh]",
   width: 1600,
   height: 800,
   bar: { groupWidth: "95%" },
   legend: { position: "none" },
-};
+}; */
 
-function App() {
+/* function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -45,6 +45,6 @@ function App() {
       options={options}
     />
   ); 
-}
+} */
 
 export default App;
