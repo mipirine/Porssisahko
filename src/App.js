@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Chart } from "react-google-charts";
-import axios from 'axios';
+//import { Chart } from "react-google-charts";
+//import axios from 'axios';
 
 function App() {
   const [data, setData] = useState('');

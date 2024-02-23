@@ -1,5 +1,5 @@
-const data = require('../services/defineApiParameters');
-const mod = require('../services/utils'); 
+//const data = require('../services/defineApiParameters');
+//const mod = require('../services/utils'); 
 
 const axios = require('axios');
 
