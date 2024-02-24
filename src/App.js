@@ -1,41 +1,24 @@
 import React, { useState, useEffect } from 'react';
-//import { Chart } from "react-google-charts";
-//import axios from 'axios';
+import { Chart } from "react-google-charts";
 
-function App() {
-  const [data, setData] = useState('');
+ function App() {
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     (async function () {
       const { text } = await( await fetch(`/api/message`)).json();
       setData(text);
     })();
-  });
-  console.log("data: ", data);
-  return <div>{data}</div>;
-} 
-/* const options = {
-  title: "Pörssisähkön hinta, 7vk [c/kWh]",
+  }, []);
+ 
+ const options = {
+  title: "Pörssisähkön hinta, 7vrk [c/kWh]",
   width: 1600,
   height: 800,
   bar: { groupWidth: "95%" },
   legend: { position: "none" },
-}; */
+}; 
 
-/* function App() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    axios.get("/api/data")
-    .then(response => {
-      setData(response.data);
-    })
-    .catch(error => {
-      console.error('Error fetching data from the server:', error.message);
-    });
-  }, []);
-
-  console.log('data: ', data);
   return (
     <Chart
       chartType="ColumnChart"
@@ -45,6 +28,6 @@ function App() {
       options={options}
     />
   ); 
-} */
+} 
 
 export default App;

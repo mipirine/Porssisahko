@@ -13,14 +13,10 @@
     "react-scripts": "^3.0.1"
   },
   "scripts": {
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
-    "build-prod": "npm install && npm update && npm run build && npm install && npm update && npm run build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "api": "nodemon --verbose --watch \"api\" --ext \"js,json\" --exec api",
-    "client": "npm start",
-    "dev": "concurrently \"npm run src\" \"npm run api\""
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
