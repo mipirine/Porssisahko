@@ -1,5 +1,13 @@
 # React basic
 
-[Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview) allows you to easily build [React](https://reactjs.org/) apps in minutes. Use this repo with the [React quickstart](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=react) to build and customize a new static site.
+This is a simple React - Node application 'Pörssisähkö', which fetches electricity market prices for last seven days and indicates the highest and lowest prices during this time period.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Application can be run locally as follows:
+cd porssisahko
+npm install
+npm run build
+swa start build --api-location api
+
+=> Azure Static Web Apps emulator starts at http://localhost:4280 and available function are in http://localhost:7071/api/message
+
+Application is running in Azure: https://black-plant-0e14d4c03.4.azurestaticapps.net/
