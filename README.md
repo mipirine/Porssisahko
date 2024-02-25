@@ -15,4 +15,4 @@ swa start build --api-location api
 
 => Azure Static Web Apps emulator starts at http://localhost:4280 and available function are in http://localhost:7071/api/message
 
-Application is running in Azure: https://black-plant-0e14d4c03.4.azurestaticapps.net/
+Application is available in Azure: https://black-plant-0e14d4c03.4.azurestaticapps.net/
