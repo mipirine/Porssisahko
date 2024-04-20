@@ -14,13 +14,13 @@ function TableComponent({selectedValue}) {
   
 console.log('data: ', data);
 
- const options = {
+ /* const options = {
   title: "Pörssisähkön hinta, 7vrk [c/kWh]",
   width: 1600,
   height: 800,
   bar: { groupWidth: "95%" },
   legend: { position: "right" },
-};   
+}; */   
     return (
     <div>
         
