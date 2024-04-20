@@ -50,7 +50,7 @@ const color = (price, min, max) => {
  * @returns data array, each row with three parameters: Data, price, css color definition 
  */
   const jsonToArray = (myData) => {
-    let data = [["Aika",  "Hinta", { role: 'style' }]];
+    let data = [["Aika",  "Hinta [c/kWh]", { role: 'style' }]];
     const min = Math.min(...myData.map(item => item.value));
     const max = Math.max(...myData.map(item => item.value));
     for(let i = 0; i < myData.length; i++){

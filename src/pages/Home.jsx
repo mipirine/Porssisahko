@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import DropdownSelection from '../components/DropdownSelection';
 import TableComponent from '../components/TableComponent';
+import figure from '../components/layout/assets/sahko_pistoke.jpg';
 
 function Home() {
     const options = [
@@ -20,7 +21,9 @@ function Home() {
       
   return (
     <div>
-        <h1>Pörssisähkön hinta</h1>
+        <img src={figure} alt="Image" className='w-1/12 h-auto' />
+        
+        <h1 className='text-6xl text-black-400 font-bold'>Pörssisähkön hinta</h1>
         <DropdownSelection options={options} onSelect={handleSelection} selectedValue={selectedValue}/>
         <TableComponent selectedValue={selectedValue} /> 
     </div>

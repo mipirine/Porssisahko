@@ -21,7 +21,7 @@ const defineApiParameters = (days) => {
      * Example, how to get prices from sahkotin.fi
      * const api = 'https://sahkotin.fi/prices?vat&start=2024-01-07T22:00:00.000Z&end=2024-01-11T13:00:00.000Z';
      */
-    let start = 8;
+    let start = 2;
 
     if (days !== undefined){
         start = parseInt(days);
@@ -29,7 +29,7 @@ const defineApiParameters = (days) => {
      
     const startYear = getPastDateInDays(start).getFullYear();
     const startMonth = getPastDateInDays(start).getMonth() + 1;
-    const startDay = getPastDateInDays(start).getDate();
+    const startDay = getPastDateInDays(start).getDate() + 1;
 
     const end = 0;
     const endYear = getPastDateInDays(end).getFullYear();
