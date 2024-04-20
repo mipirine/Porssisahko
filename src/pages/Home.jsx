@@ -21,7 +21,7 @@ function Home() {
       
   return (
     <div>
-        <img src={figure} alt="Image" className='w-1/12 h-auto' />
+        <img src={figure} alt="Kuva" className='w-1/12 h-auto' />
         
         <h1 className='text-6xl text-black-400 font-bold'>Pörssisähkön hinta</h1>
         <DropdownSelection options={options} onSelect={handleSelection} selectedValue={selectedValue}/>
