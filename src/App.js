@@ -1,37 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { Chart } from "react-google-charts";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
+import Home from './pages/Home';
+import About from './pages/About'
  function App() {
-  const [data, setData] = useState([]);
-
-    useEffect(() => {
-    (async function () {
-      const { text } = await( await fetch(`/api/message`)).json();
-      setData(text);
-    })();
-  }, []); 
-  
- console.log('data: ', data);
-
- const options = {
-  title: "Pörssisähkön hinta, 7vrk [c/kWh]",
-  width: 1600,
-  height: 800,
-  bar: { groupWidth: "95%" },
-  legend: { position: "none" },
-}; 
 
   return ( 
-    (data === undefined? 
-    <div>Loading...</div> :
-    <Chart
-      chartType="ColumnChart"
-      width="100%"
-      height="400px"
-      data={data}
-      options={options}
-    />
-  ))
+    <>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />  
+      </Routes>
+    </Router>
+    </>
+  )
 } 
 
 export default App;

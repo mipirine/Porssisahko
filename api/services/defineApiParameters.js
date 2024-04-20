@@ -1,3 +1,5 @@
+
+
 /**
  * 
  * @param {*} n 
@@ -13,18 +15,23 @@ function getPastDateInDays(n) {
  * 
  * @returns string api, which includes address with start and end times for query 
  */
-const defineApiParameters = () => {
+const defineApiParameters = (days) => {
+
     /**
      * Example, how to get prices from sahkotin.fi
      * const api = 'https://sahkotin.fi/prices?vat&start=2024-01-07T22:00:00.000Z&end=2024-01-11T13:00:00.000Z';
      */
-  
-    const start = 7; 
+    let start = 8;
+
+    if (days !== undefined){
+        start = parseInt(days);
+    }
+     
     const startYear = getPastDateInDays(start).getFullYear();
     const startMonth = getPastDateInDays(start).getMonth() + 1;
     const startDay = getPastDateInDays(start).getDate();
 
-    const end = 1;
+    const end = 0;
     const endYear = getPastDateInDays(end).getFullYear();
     const endMonth = getPastDateInDays(end).getMonth() + 1;
     const endDay = getPastDateInDays(end).getDate()
@@ -35,7 +42,7 @@ const defineApiParameters = () => {
 
     const api = 'https://sahkotin.fi/prices?vat&start=' + startDate + 'T00:00:00.000Z&end='
      + endDate + 'T23:00:00.000Z';
-    
+
     return api;
 }
 
